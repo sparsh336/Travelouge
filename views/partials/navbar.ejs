@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/campgrounds">TRAVELOUGE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/campgrounds">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/campgrounds">Campgrounds</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active " href="/campgrounds/new" tabindex="-1" >New</a>
+          </li>   
+        </div>
+         
+          <div class="navbar-nav ml-auto">
+            <%  if(!currentUser){%>  
+            <a class="nav-link active" href="/login">Login</a>
+            
+            <a class="nav-link active" href="/register">Register</a>
+            <% } else {%>
+              <span class="text-center mt-2 color:white"> welcome <%= currentUser.username %></span>  
+            <a class="nav-link active" href="/logout">Logout</a>
+            <% } %> 
+        </div>
+      
+      </div>
+    </div>
+  </nav>

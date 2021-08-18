@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate')  %> 
+   <div class="row">
+       <h1 class="text-center">Edit campground</h1>
+       <div class="col-6 offset-3">
+        <form action="/campgrounds/<%=editcamp._id%>?_method=PUT" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+             <label class="form-label" for="title"> Name</label>
+             <input class="form-control" type="text" id="title" placeholder="name" name="campground[title]" value="<%= editcamp.title %> " required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"for="location">Location</label>
+                <input  class="form-control"type="text" id="location" placeholder="location" name="campground[location]"value="<%= editcamp.location %> " required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"for="image">Image URL</label>
+                <input  class="form-control"type="text" id="image" placeholder="image" name="campground[image]" value="<%= editcamp.image %> " required>
+            </div>
+            <div mb-3> 
+                <label class="form-label"for="price">Price</label>
+                <div class="input-group ">
+                    <span class="input-group-text">
+                       <input type="text" name="campground[price]" value="<%= editcamp.price  %>" required> .00</span>
+                  </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label"for="description">Description</label>
+                <textarea  class="form-control" id="description" placeholder="description" name="campground[description]" cols="10" rows="2"value="<%= editcamp. description %> "required></textarea>  
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">click to submit</button>
+            </div>
+     

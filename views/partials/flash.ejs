@@ -1,0 +1,13 @@
+  <% if(s&&s.length){ %> 
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= s %> 
+    <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %> 
+
+<% if(error&&error.length){ %> 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= error %> 
+      <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% } %> 
